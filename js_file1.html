@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dice Roll</title>
+    <style>
+      
+    </style>
+</head>
+<body>
+
+    <h1> RANDOM NUMBERS </h1>
+
+    <lable id="xid" > X </lable>
+    <span>---------------</span>
+    <lable id="xvalue"> X value</lable>
+    <br><br>
+
+    <lable id="yid" > X </lable>
+    <span>---------------</span>
+    <lable id="yvalue"> Y value</lable>
+    <br><br>
+
+    <lable id="zid" > Z </lable>
+    <span>---------------</span>
+    <lable id="zvalue"> Z value</lable>
+    <br><br>
+    <button onclick="roll()">NUMBER TROLL </button>
+    <br><br>
+
+    <h1> ALPHABET NUMBERS </h1>
+
+    <lable id="xalphaid" > X </lable>
+    <span>---------------</span>
+    <lable id="xalphavalue"> X alpha value</lable>
+    <br><br>
+
+    <lable id="yalphaid" > X </lable>
+    <span>---------------</span>
+    <lable id="yalphavalue"> Y alpha value</lable>
+    <br><br>
+
+    <lable id="zalphaid" > Z </lable>
+    <span>---------------</span>
+    <lable id="zalphavalue"> Z alpha value</lable>
+    <br><br>
+    <button onclick="alpha_roll()">ALPHABET TROLL </button>
+    <br><br>
+
+
+
+<script>
+        function roll()
+        {
+            let xvalue= Math.floor(Math.random() *19 +1);
+            let yvalue= Math.floor(Math.random() * 13 +1);
+            let zvalue= Math.floor(Math.random() *17 +1);
+
+            document.getElementById("xvalue").innerHTML=xvalue ;
+            document.getElementById("yvalue").innerHTML=yvalue ;
+            document.getElementById("zvalue").innerHTML=zvalue ;
+            
+        }
+
+        function alpha_roll()
+        {
+            const randomLatters="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+
+            let randomIndex_x = Math.floor(Math.random()*52 +1 );
+            let randomIndex_y = Math.floor(Math.random()*52 +1 );
+            let randomIndex_z = Math.floor(Math.random()*52 +1 );
+
+            document.getElementById("xalphavalue").innerHTML=randomLatters[randomIndex_x];
+            document.getElementById("yalphavalue").innerHTML=randomLatters[randomIndex_y];
+            document.getElementById("zalphavalue").innerHTML=randomLatters[randomIndex_z];
+        
+        }
+</script>
+
+</body>
+</html>
